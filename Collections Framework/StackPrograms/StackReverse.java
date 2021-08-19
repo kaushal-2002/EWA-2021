@@ -7,31 +7,49 @@ public class StackReverse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the sentence: ");
-		String str = sc.nextLine();
 		
-		System.out.println("Entered sentence is: "+str);
+		// Reverse the given sentence 
 		
-		// "Mary had a little lamb." --> single string
+		// Marry had a little lamb. Its fleece was white as Snow. 
 		
-		String[] words = str.split(" ");
 		Stack<String> stack = new Stack<>();
 		
-		for(int i = 0; i < words.length; i++) {
-			String temp = words[i];
-			if(temp.endsWith(".")) {
-				stack.push(temp.substring(0, temp.length()-1));
-				break;
-			}
-			else {
-				stack.push(temp);
-			}	
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the sentece: ");
+		
+		String str = sc.nextLine();
+		
+		String[] words = str.split(" ");
+		int i = 0;
+		do {
+			for( ; i < words.length;) {
+				String temp = words[i];
+				i++;
+				if(temp.endsWith(".")) {
+					temp = temp.substring(0, temp.length()-1);
+					char[] ca = temp.toCharArray();
+					ca[0] = Character.toUpperCase(ca[0]);
+					
+					String temp2 = new String(ca);
+					stack.push(temp2);
+					break;
+				}
+				else {
+					stack.push(temp);
+				}
 		}
 		while(!stack.isEmpty()) {
-			System.out.print(stack.pop()+" ");
+			if(stack.size() == 1) {
+				System.out.print(stack.pop()+". ");
+			}
+			else {
+				System.out.print(stack.pop()+" ");
+			}
 		}
-		System.out.println(".");
+		}while(i < words.length);
+		
+		
 	}
 
 }
