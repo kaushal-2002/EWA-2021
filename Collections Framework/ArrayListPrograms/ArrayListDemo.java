@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class ArrayListDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		ArrayList<String> list1 = new ArrayList<>();
 		
 		// add elements into arraylist
@@ -52,7 +52,7 @@ public class ArrayListDemo {
 		ArrayList<Integer> list2 = new ArrayList<>();
 		
 		
-		// this is arraylist demo
+		// this is arraylist demo 
 	}
 
 }
