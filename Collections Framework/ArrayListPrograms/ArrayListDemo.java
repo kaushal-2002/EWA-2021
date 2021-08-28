@@ -8,7 +8,7 @@ public class ArrayListDemo {
 		
 		ArrayList<String> list1 = new ArrayList<>();
 		
-		// add elements into arraylist
+		
 		
 		list1.add("Amazon");
 		list1.add("Apple");
