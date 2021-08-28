@@ -52,7 +52,7 @@ public class ArrayListDemo {
 		ArrayList<Integer> list2 = new ArrayList<>();
 		
 		
-		// this is arraylist demo 
+		
 	}
 
 }
